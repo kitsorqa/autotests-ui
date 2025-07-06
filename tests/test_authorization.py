@@ -1,5 +1,5 @@
 import pytest
-from playwright.sync_api import expect, Page
+from playwright.sync_api import expect, sync_playwright
 
 
 @pytest.mark.parametrize("email, password", [
@@ -10,18 +10,21 @@ from playwright.sync_api import expect, Page
     "User with invalid email and password",
     "User with invalid email and empty password",
     "User with empty email and invalid password"])
-def test_wrong_email_or_password_authorization(chromium_page_with_state: Page, email: str, password: str):
-    chromium_page_with_state.goto("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/login")
+def test_wrong_email_or_password_authorization(email: str, password: str):
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch(headless=False)
+        page = browser.new_page()
+        page.goto("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/login")
 
-    email_input = chromium_page_with_state.get_by_test_id('login-form-email-input').locator('input')
-    email_input.fill(email)
+        email_input = page.get_by_test_id('login-form-email-input').locator('input')
+        email_input.fill(email)
 
-    password_input = chromium_page_with_state.get_by_test_id('login-form-password-input').locator('input')
-    password_input.fill(password)
+        password_input = page.get_by_test_id('login-form-password-input').locator('input')
+        password_input.fill(password)
 
-    login_button = chromium_page_with_state.get_by_test_id('login-page-login-button')
-    login_button.click()
+        login_button = page.get_by_test_id('login-page-login-button')
+        login_button.click()
 
-    wrong_email_or_password_alert = chromium_page_with_state.get_by_test_id('login-page-wrong-email-or-password-alert')
-    expect(wrong_email_or_password_alert).to_be_visible()
-    expect(wrong_email_or_password_alert).to_have_text("Wrong email or password")
+        wrong_email_or_password_alert = page.get_by_test_id('login-page-wrong-email-or-password-alert')
+        expect(wrong_email_or_password_alert).to_be_visible()
+        expect(wrong_email_or_password_alert).to_have_text("Wrong email or password")
