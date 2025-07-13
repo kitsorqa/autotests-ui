@@ -53,7 +53,7 @@ class CreateCoursePage(BasePage):
         expect(self.create_course_title).to_have_text("Create course")
 
     def click_create_course_button(self):
-        expect(self.create_course_button).click()
+        self.create_course_button.click()
 
     def check_visible_create_course_button(self):
         expect(self.create_course_button).to_be_visible()
@@ -90,7 +90,7 @@ class CreateCoursePage(BasePage):
     def check_visible_preview_image(self):
         expect(self.preview_image).to_be_visible()
 
-    def upload_view_image(self, file: str):
+    def upload_preview_image(self, file: str):
         self.preview_image_upload_input.set_input_files(file)
 
     def check_visible_create_course_form(
@@ -163,6 +163,9 @@ class CreateCoursePage(BasePage):
         delete_exercise_button = self.page.get_by_test_id(
             f"create-course-exercise-{index}-box-toolbar-delete-exercise-button")
         delete_exercise_button.click()
+
+    def check_visible_create_exercise_button(self):
+        expect(self.create_exercises_button).to_be_visible()
 
     def check_visible_create_exercise_form(self, index: int, title: str, description: str):
         exercise_subtitle = self.page.get_by_test_id(

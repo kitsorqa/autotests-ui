@@ -43,13 +43,14 @@ class CoursesListPage(BasePage):
     def click_create_course_button(self):
         self.create_course_button.click()
 
-    def check_course_card(
+    def check_visible_course_card(
             self,
-            title: str,
             index: int,
-            max_score: int,
-            min_score: int,
-            estimated_time: str):
+            title: str,
+            max_score: str,
+            min_score: str,
+            estimated_time: str
+    ):
         expect(self.course_image.nth(index)).to_be_visible()
 
         expect(self.course_title.nth(index)).to_be_visible()
