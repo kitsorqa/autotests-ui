@@ -3,6 +3,7 @@ from components.navigation.sidebar_list_item_component import SideBarListItemCom
 from playwright.sync_api import Page, expect
 import re
 
+
 class SidebarComponent(BaseComponent):
     def __init__(self, page: Page):
         super().__init__(page)
