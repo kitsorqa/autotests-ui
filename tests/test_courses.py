@@ -14,6 +14,7 @@ def test_empty_courses_list(courses_list_page: CoursesListPage):
     courses_list_page.check_visible_empty_view()
 
 
+
 @pytest.mark.courses
 @pytest.mark.regression
 def test_create_course(chromium_page_with_state, create_course_page, courses_list_page):
