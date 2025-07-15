@@ -15,6 +15,8 @@ def test_empty_courses_list(courses_list_page: CoursesListPage):
     courses_list_page.check_visible_empty_view()
 
 
+@pytest.mark.courses
+@pytest.mark.regression
 def test_create_course(chromium_page_with_state, create_course_page, courses_list_page):
     chromium_page_with_state.goto("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses/create")
 
@@ -24,11 +26,8 @@ def test_create_course(chromium_page_with_state, create_course_page, courses_lis
     create_course_page.check_visible_image_preview_empty_view()
     create_course_page.check_visible_image_upload_view()
 
-    create_course_page.check_visible_create_course_form(title="",
-                                                        estimated_time="",
-                                                        description="",
-                                                        max_score="0",
-                                                        min_score="0")
+    create_course_page.check_visible_create_course_form(
+        title="", estimated_time="", description="", max_score="0", min_score="0")
 
     create_course_page.check_visible_exercises_title()
     create_course_page.check_visible_create_exercise_button()
@@ -47,6 +46,6 @@ def test_create_course(chromium_page_with_state, create_course_page, courses_lis
     courses_list_page.check_visible_courses_title()
     courses_list_page.check_visible_create_course_button()
 
-    courses_list_page.check_visible_course_card(
+    courses_list_page.course_view.check_visible(
         index=0, title="Playwright", estimated_time="2 weeks", max_score="100", min_score="10"
     )
