@@ -1,31 +1,33 @@
 from components.base_component import BaseComponent
 from playwright.sync_api import expect, Page
 
+from elements.input import Input
+
 
 class RegistrationFormComponent(BaseComponent):
     def __init__(self, page: Page):
         super().__init__(page)
 
-        self.email_field = page.get_by_test_id("registration-form-email-input").locator("input")
-        self.username_field = page.get_by_test_id("registration-form-username-input").locator("input")
-        self.password_field = page.get_by_test_id("registration-form-password-input").locator("input")
+        self.email_input = Input(page, "registration-form-email-input", 'Email')
+        self.username_input = Input(page, "registration-form-username-input", 'Username')
+        self.password_input = Input(page, "registration-form-password-input", 'Password')
 
     def fill(self, email: str, username: str, password: str):
-        self.email_field.fill(email)
-        expect(self.email_field).to_have_value(email)
+        self.email_input.fill(email)
+        self.email_input.check_have_value(email)
 
-        self.username_field.fill(username)
-        expect(self.username_field).to_have_value(username)
+        self.username_input.fill(username)
+        self.username_input.check_have_value(username)
 
-        self.password_field.fill(password)
-        expect(self.password_field).to_have_value(password)
+        self.password_input.fill(password)
+        self.password_input.check_have_value(password)
 
     def check_visible(self, email: str, username: str, password: str):
-        expect(self.email_field).to_be_visible()
-        expect(self.email_field).to_have_value(email)
+        self.email_input.check_visible()
+        self.email_input.check_have_value(email)
 
-        expect(self.username_field).to_be_visible()
-        expect(self.username_field).to_have_value(username)
+        self.username_input.check_visible()
+        self.username_input.check_have_value(username)
 
-        expect(self.password_field).to_be_visible()
-        expect(self.password_field).to_have_value(password)
+        self.password_input.check_visible()
+        self.password_input.check_have_value(password)

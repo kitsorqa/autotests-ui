@@ -1,5 +1,4 @@
 from components.base_component import BaseComponent
-from playwright.sync_api import expect, Page
 
 from elements.button import Button
 from elements.input import Input
