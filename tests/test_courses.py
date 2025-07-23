@@ -1,12 +1,13 @@
 import pytest
 from pages.courses_list_page import CoursesListPage
 from pages.create_course_page import CreateCoursePage
+import time
 
 
 @pytest.mark.courses
 @pytest.mark.regression
-def test_empty_courses_list(courses_list_page: CoursesListPage, create_course_page: CreateCoursePage):
-    courses_list_page.visit("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses")
+def test_create_course(courses_list_page: CoursesListPage, create_course_page: CreateCoursePage):
+    create_course_page.visit("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses/create")
 
     create_course_page.create_course_toolbar_view.check_visible()
     create_course_page.image_upload_widget.check_visible(is_image_uploaded=False)
