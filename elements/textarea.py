@@ -2,7 +2,7 @@ from elements.base_element import BaseElement
 from playwright.sync_api import expect, Locator
 
 
-class Input(BaseElement):
+class Textarea(BaseElement):
     def get_locator(self, nth: int = 0, **kwargs) -> Locator:
         return super().get_locator(nth, **kwargs).locator('textarea').first
 
