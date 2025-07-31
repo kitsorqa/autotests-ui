@@ -2,3 +2,4 @@
 .venv
 .idea
 browser-state.json
+allure-results
