@@ -5,3 +5,4 @@ browser-state.json
 allure-results
 tracing
 videos
+.env
