@@ -1,7 +1,6 @@
 # created by virtualenv automatically
 .venv
 .idea
-*.json
 *.html
 allure-results
 allure-report
