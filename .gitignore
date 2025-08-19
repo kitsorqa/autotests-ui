@@ -2,6 +2,7 @@
 .venv
 .idea
 *.html
+*.json
 allure-results
 allure-report
 tracing
