@@ -54,8 +54,8 @@ jobs:
 
 
       - name: Deploy report to Github Pages
-        if: always()
         uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main' && always()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
