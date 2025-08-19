@@ -1,0 +1,61 @@
+INFO     BasePage:base_page.py:18 Opening with url: AppRoute.DASHBOARD
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=navigation-navbar-app-title-text' at index '0'
+INFO     BaseElement:base_element.py:40 Checking that text 'App title' is visible
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=navigation-navbar-app-title-text' at index '0'
+INFO     BaseElement:base_element.py:48 Clicking text 'App title' has text 'UI Course'
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=navigation-navbar-welcome-title-text' at index '0'
+INFO     BaseElement:base_element.py:40 Checking that text 'Welcome title' is visible
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=navigation-navbar-welcome-title-text' at index '0'
+INFO     BaseElement:base_element.py:48 Clicking text 'Welcome title' has text 'Welcome, username!'
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=logout-drawer-list-item-icon' at index '0'
+INFO     BaseElement:base_element.py:40 Checking that icon 'Icon' is visible
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=logout-drawer-list-item-title-text' at index '0'
+INFO     BaseElement:base_element.py:40 Checking that text 'Title' is visible
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=logout-drawer-list-item-title-text' at index '0'
+INFO     BaseElement:base_element.py:48 Clicking text 'Title' has text 'Logout'
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=logout-drawer-list-item-button' at index '0'
+INFO     BaseElement:base_element.py:40 Checking that button 'Button' is visible
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=courses-drawer-list-item-icon' at index '0'
+INFO     BaseElement:base_element.py:40 Checking that icon 'Icon' is visible
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=courses-drawer-list-item-title-text' at index '0'
+INFO     BaseElement:base_element.py:40 Checking that text 'Title' is visible
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=courses-drawer-list-item-title-text' at index '0'
+INFO     BaseElement:base_element.py:48 Clicking text 'Title' has text 'Courses'
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=courses-drawer-list-item-button' at index '0'
+INFO     BaseElement:base_element.py:40 Checking that button 'Button' is visible
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=dashboard-drawer-list-item-icon' at index '0'
+INFO     BaseElement:base_element.py:40 Checking that icon 'Icon' is visible
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=dashboard-drawer-list-item-title-text' at index '0'
+INFO     BaseElement:base_element.py:40 Checking that text 'Title' is visible
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=dashboard-drawer-list-item-title-text' at index '0'
+INFO     BaseElement:base_element.py:48 Clicking text 'Title' has text 'Dashboard'
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=dashboard-drawer-list-item-button' at index '0'
+INFO     BaseElement:base_element.py:40 Checking that button 'Button' is visible
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=dashboard-toolbar-title-text' at index '0'
+INFO     BaseElement:base_element.py:40 Checking that text 'Title' is visible
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=dashboard-toolbar-title-text' at index '0'
+INFO     BaseElement:base_element.py:48 Clicking text 'Title' has text 'Dashboard'
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=scores-widget-title-text' at index '0'
+INFO     BaseElement:base_element.py:40 Checking that text 'Title' is visible
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=scores-widget-title-text' at index '0'
+INFO     BaseElement:base_element.py:48 Clicking text 'Title' has text 'Scores'
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=scores-scatter-chart' at index '0'
+INFO     BaseElement:base_element.py:40 Checking that image 'Image' is visible
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=courses-widget-title-text' at index '0'
+INFO     BaseElement:base_element.py:40 Checking that text 'Title' is visible
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=courses-widget-title-text' at index '0'
+INFO     BaseElement:base_element.py:48 Clicking text 'Title' has text 'Courses'
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=courses-pie-chart' at index '0'
+INFO     BaseElement:base_element.py:40 Checking that image 'Image' is visible
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=students-widget-title-text' at index '0'
+INFO     BaseElement:base_element.py:40 Checking that text 'Title' is visible
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=students-widget-title-text' at index '0'
+INFO     BaseElement:base_element.py:48 Clicking text 'Title' has text 'Students'
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=students-bar-chart' at index '0'
+INFO     BaseElement:base_element.py:40 Checking that image 'Image' is visible
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=activities-widget-title-text' at index '0'
+INFO     BaseElement:base_element.py:40 Checking that text 'Title' is visible
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=activities-widget-title-text' at index '0'
+INFO     BaseElement:base_element.py:48 Clicking text 'Title' has text 'Activities'
+INFO     BaseElement:base_element.py:24 Getting locator with 'data-testid=activities-line-chart' at index '0'
+INFO     BaseElement:base_element.py:40 Checking that image 'Image' is visible
