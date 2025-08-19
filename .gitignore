@@ -1,8 +1,10 @@
 # created by virtualenv automatically
 .venv
 .idea
-browser-state.json
+*.json
+*.html
 allure-results
+allure-report
 tracing
 videos
 .env
